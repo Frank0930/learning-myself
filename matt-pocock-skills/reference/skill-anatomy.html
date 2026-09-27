@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SKILL.md 結構速查</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">速查表</div><h1>如何讀一份 SKILL.md</h1>
+<p class="lead">先分辨「入口資訊」與「執行指令」。再問：誰會呼叫它？何時呼叫？執行後留下什麼？</p>
+<pre><code>---
+name: example-skill
+description: 這個技能做什麼，以及適用情境
+disable-model-invocation: true  # 如果只讓使用者主動呼叫
+---
+
+# 正文
+何時使用、要讀哪些資料、依序做什麼、完成如何判定。</code></pre>
+<p class="small">這是教學示意，並非官方檔案原文。不同技能的欄位與正文組織會有所不同。</p>
+<div class="table-wrap"><table><thead><tr><th>位置</th><th>要回答的問題</th><th>閱讀提示</th></tr></thead><tbody>
+<tr><td><code>name</code></td><td>這個技能叫什麼？</td><td>與目錄及呼叫名稱對照。</td></tr>
+<tr><td><code>description</code></td><td>它做什麼？什麼情境會想到它？</td><td>模型可呼叫的技能尤其需要清楚的觸發條件。</td></tr>
+<tr><td><code>disable-model-invocation</code></td><td>只有人主動呼叫，還是 agent 也可依情境採用？</td><td><code>true</code> 表示手動呼叫；若要模型也能呼叫，依官方文件省略此欄位，並寫明 <code>description</code> 的觸發情境。</td></tr>
+<tr><td>正文</td><td>實際怎麼做？何時算完成？</td><td>找步驟、決策分支、引用的附加文件及完成標準。</td></tr>
+</tbody></table></div>
+<p>官方對兩種呼叫方式的說明見 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md">Skill mechanics</a>。設計正文時，可參考 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">writing-for-agents</a> 對脈絡指標、資訊層級與可檢查完成標準的說明。</p>
+<nav><a href="../lessons/0002-read-a-skill-file.html">第二課</a><a href="skill-map.html">25 個技能地圖</a></nav>
+</main></body></html>

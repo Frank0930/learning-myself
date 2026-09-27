@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第二課：讀懂 SKILL.md 的兩層結構</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">Matt Pocock Skills · 第二課 · 約 7 分鐘</div><h1>讀懂 SKILL.md 的兩層結構</h1>
+<p class="lead">上一課你已能把「釐清需求 → 規格 → 任務」串起來。這次要從檔案本身看出技能為何在某個時機出現，以及出現後會怎麼工作。</p>
+<h2>第一層：frontmatter 是入口</h2>
+<p><code>SKILL.md</code> 開頭兩條 <code>---</code> 之間是 YAML frontmatter。官方 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md">to-spec 原檔</a>有 <code>name</code>、<code>description</code>和 <code>disable-model-invocation: true</code>。這代表它由使用者主動選用；描述是給人看的用途摘要。相對地，官方 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md">tdd 原檔</a>沒有這個停用欄位，描述列出「想以測試優先建立功能或修 bug」等觸發情境，讓 agent 也能依任務採用。詳細機制見<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md">官方 Skill mechanics</a>。</p>
+<div class="callout"><strong>快速判讀：</strong>先找 <code>disable-model-invocation</code>。有 <code>true</code>：人是入口；沒有：agent 也可能依 <code>description</code> 找到它。兩者都可以由人直接指定。官方 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md">Skill mechanics</a> 的寫法是<strong>省略該欄位</strong>，不是要求寫成 <code>false</code>。</div>
+<h2>第二層：正文是工作方法</h2>
+<p>Frontmatter 告訴你何時進門；正文告訴 agent 進門後怎麼做。例如 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md">to-spec</a>要求查看程式庫、確認測試接縫、按模板產出規格並發佈到專案 issue tracker。你的「把共識變成文檔」方向正確；原技能的交付物更精確地說，是發佈到追蹤系統的規格。接著 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md">to-tickets</a>把規格拆為帶有依賴關係的任務。</p>
+<p>閱讀正文時先找三件事：<strong>輸入</strong>從哪裡來，<strong>動作</strong>依什麼順序做，<strong>完成標準</strong>如何判斷。日後設計自己的技能時，這三件事能幫團隊知道它是否可執行、可驗證。<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">官方 writing-for-agents</a>進一步討論清楚的完成標準。</p>
+<section class="exercise"><h2>實戰題：向團隊解釋一個陌生技能</h2>
+<p>同事寫了一個技能，開頭如下（教學示意）：</p>
+<pre><code>---
+name: incident-review
+description: 分析已發生的服務事故，找出根因並產出後續行動。
+disable-model-invocation: true
+---</code></pre>
+<p>請回答兩件事：① 依這份 frontmatter，誰能啟動它？② 如果團隊希望 agent 在使用者說「幫我回顧昨天的事故」時也能主動採用，應改哪裡？請說明原因，不必寫完整技能。</p>
+<p class="small">請把答案回覆給我；我會指出判讀是否正確，並用下一課帶你看好技能的觸發條件與完成標準。任何句子不清楚，也請直接追問。</p></section>
+<h2>延伸閱讀</h2><p>讀 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md">官方 Skill mechanics</a> 的 Invocation 小節，再對照 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md">to-spec</a> 和 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md">tdd</a> 的開頭。複習時用<a href="../reference/skill-anatomy.html">SKILL.md 結構速查</a>。</p>
+<nav><a href="0001-choose-the-right-skill.html">上一課</a><a href="../reference/skill-anatomy.html">結構速查</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

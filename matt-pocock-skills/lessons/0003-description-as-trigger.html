@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三課：description 是技能入口</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">Matt Pocock Skills · 第三課 · 約 6 分鐘</div><h1><code>description</code> 是技能入口</h1>
+<p class="lead">你已會判斷呼叫方式。現在練習讓 agent 在正確時機找到技能：把「做什麼」和「何時用」都寫進描述。</p>
+<h2>讀者只看到入口時，能否選對？</h2>
+<p>Matt Pocock 在<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">官方 writing-for-agents</a>把 <code>description</code> 視為 context pointer：它要指出後面的文件是什麼，也要讓 agent 辨認何時該讀。<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md">Skill mechanics</a>進一步說明，模型可呼叫的技能會讓這段描述持續可見，所以每個字都要有作用。</p>
+<p>你寫的「分析已發生的服務事故，找出根因並產出後續行動」已清楚說明<strong>工作內容</strong>。若團隊會說「回顧昨天的事故」，可以把「事後回顧」放在前面，讓<strong>使用時機</strong>也清楚：</p>
+<pre><code>description: 服務事故事後回顧。當使用者要求檢討已結束的事故時，整理時間線、分析根因並提出後續行動。</code></pre>
+<p class="small">上方是依官方寫作原則改寫的教學示例，不是官方技能原文。</p>
+<div class="callout"><strong>一個實用檢查：</strong>只看 <code>description</code>，能否判斷「昨天的事故檢討」該用它，而「服務現在正在故障，先恢復服務」暫時不該用它？如果做不到，就再把觸發情境或邊界寫清楚。</div>
+<h2>少寫重複說法，多寫不同情境</h2>
+<p>官方建議讓描述前面的字先負責觸發，並為不同的工作分支各留一個清楚的觸發條件。近義詞若只是重複同一種情境，通常不必全部堆上去。這讓 agent 更容易在有限的描述中看見真正的適用範圍。詳見<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">官方「Context pointers」小節</a>。</p>
+<section class="exercise"><h2>實戰題：寫給團隊看的觸發描述</h2>
+<p>團隊準備一個 <code>api-change-review</code> 技能：它會檢查<strong>已完成的 API 變更</strong>是否符合原始規格、是否破壞既有客戶端。請寫一句 <code>description</code>，讓 agent 在「請審查這次 API 改動」時會想到它，也能和「幫我設計新的 API」區分。再用一句話說明你把哪個觸發詞放在前面。</p>
+<p class="small">把答案回覆給我。我會檢查觸發情境、任務邊界與語句是否精簡；有不清楚的地方也請直接問。</p></section>
+<h2>延伸閱讀</h2><p>讀<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">官方 writing-for-agents</a>的「Context pointers」與「Pruning」小節。對照<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md">tdd 的 frontmatter</a>，觀察它如何列出使用者可能提出的測試情境。</p>
+<nav><a href="0002-read-a-skill-file.html">上一課</a><a href="../reference/skill-anatomy.html">結構速查</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一課：先判斷問題，再選技能</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">Matt Pocock Skills · 第一課 · 約 6 分鐘</div>
+<h1>先判斷問題，再選技能</h1>
+<p class="lead">你的第一個教學目標：聽到團隊的工程情境後，能說出「眼前最需要解決的問題」與「下一個適合的技能」。</p>
+<p>Matt Pocock 在<a href="https://github.com/mattpocock/skills#why-these-skills-exist">官方 README</a>用四種常見失敗描述這套技能為何存在：需求沒對齊、代理人說得太囉嗦、程式跑不起來，以及架構逐漸失控。把它們當成診斷問題的入口，比背技能名稱容易。</p>
+<div class="table-wrap"><table><thead><tr><th>你看到的徵兆</th><th>先想到的能力</th><th>官方例子</th></tr></thead><tbody>
+<tr><td>大家對功能的意思各說各話</td><td>釐清意圖與專案語言</td><td><a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/grill-with-docs.md">grill-with-docs</a>、<a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/domain-modeling.md">domain-modeling</a></td></tr>
+<tr><td>已有明確需求，但缺少可執行計畫</td><td>把共識轉成規格與小任務</td><td><a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/to-spec.md">to-spec</a>、<a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/to-tickets.md">to-tickets</a></td></tr>
+<tr><td>功能或修正的正確性沒有回饋</td><td>建立可觀察的測試迴圈</td><td><a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/tdd.md">tdd</a>；難解 bug 用 <a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/diagnosing-bugs.md">diagnosing-bugs</a></td></tr>
+<tr><td>每次修改都牽動很多模組</td><td>找清楚模組邊界</td><td><a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/codebase-design.md">codebase-design</a>、<a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/improve-codebase-architecture.md">improve-codebase-architecture</a></td></tr>
+</tbody></table></div>
+<h2>技能可以串接，但順序由問題決定</h2>
+<p>例如團隊要加「取消訂閱」功能，產品經理、客服與工程師對「取消」是否立即生效意見不同。先用 <code>grill-with-docs</code>釐清詞義與決策；有共識後用 <code>to-spec</code>記錄規格，再用 <code>to-tickets</code>拆小工作。開始實作時，<code>implement</code>會在約定的接縫使用 <code>tdd</code>，最後用 <code>code-review</code>檢查規格與程式標準。這條組合取自官方 <a href="https://github.com/mattpocock/skills#reference">README 技能索引</a>中的職責說明。</p>
+<div class="flow"><span>釐清語意</span><b>→</b><span>寫成規格</span><b>→</b><span>拆成任務</span><b>→</b><span>實作與測試</span><b>→</b><span>審查</span></div>
+<div class="callout"><strong>今天先記住：</strong>技能是可組合的工作方法。選擇依據是目前的瓶頸；同一個專案在不同階段可能需要不同技能。完整清單請看<a href="../reference/skill-map.html">技能速查表</a>。</div>
+<section class="exercise"><h2>實戰題：請先自己作答</h2><p>團隊收到一張 ticket：「會員可以暫停方案」。有人認為暫停後立刻停止扣款；有人認為本期結束才停；工程師已準備新增資料庫欄位。你會先選哪個技能？接著可能接哪兩個技能？請用 2–4 句說明你判斷的瓶頸與順序。</p><p class="small">請把答案回覆給我。我會根據理由給回饋，再決定第二課從哪個技能切入。也可以直接問我任何看不懂的地方。</p></section>
+<h2>延伸閱讀</h2><p>先讀官方 <a href="https://github.com/mattpocock/skills#why-these-skills-exist">Why These Skills Exist</a> 與 <a href="https://github.com/mattpocock/skills#reference">Reference</a>。只需找出「問題 → 技能」的關係，暫時不必記住全部名稱。</p>
+<nav><a href="../reference/skill-map.html">技能速查表</a><a href="https://github.com/mattpocock/skills">官方 repository</a></nav>
+</main></body></html>
