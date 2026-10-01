@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第四課：讓技能知道何時做完</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">Matt Pocock Skills · 第四課 · 約 6 分鐘</div><h1>讓技能知道何時做完</h1>
+<p class="lead">你已會寫技能的入口。這次要看正文中的一個關鍵設計：每個重要步驟，怎樣才算真的完成？</p>
+<h2>完成標準要能檢查</h2>
+<p>Matt Pocock 的 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">writing-for-agents</a>指出，步驟需要清楚的 completion criterion。它要同時回答：agent 能不能判斷「做完了」？標準要求它查到多完整？「仔細檢查」看似合理，卻沒有告訴 agent 哪些項目不能漏。</p>
+<div class="table-wrap"><table><thead><tr><th>寫法</th><th>agent 可以怎麼判斷完成？</th></tr></thead><tbody>
+<tr><td>「檢查 API 變更，寫一份報告。」</td><td>範圍不明；即使只看一個 endpoint，也可能宣稱完成。</td></tr>
+<tr><td>「列出這次變更的每個 endpoint；逐一對照規格，檢查回應格式、狀態碼與既有客戶端相容性；每項結論附上程式差異或測試證據，未能確認者列為待查。」</td><td>有範圍、檢查項目、證據要求與未解決事項，較容易核對。</td></tr>
+</tbody></table></div>
+<p class="small">上表是教學示例，不是官方技能原文。真實審查項目應依專案的 API 契約調整。</p>
+<h2>從官方技能看完成的邊界</h2>
+<p>你已選過的 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md">to-tickets</a>要求每張 ticket 是可獨立展示或驗證的完整縱向切片、標出阻擋它的任務，並在使用者確認拆分後發佈到設定的 tracker。這些要求讓「拆好了」比「寫了幾張 ticket」更具體。<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">writing-for-agents</a>將這種完成標準分成清晰度與要求強度：既要能判斷完成，也要要求足夠的查核。</p>
+<div class="callout"><strong>教團隊時可問：</strong>如果 agent 只花 30 秒就說「完成」，這份 SKILL.md 的哪一句能指出它還漏了什麼？若找不到，那個步驟可能需要更清楚的完成標準。</div>
+<section class="exercise"><h2>實戰題：修好一個模糊步驟</h2><p>有人為 <code>api-change-review</code> 寫了這句正文：「檢查這次 API 改動是否符合規格，完成後回報結果。」請把它改成 1–2 句<strong>可檢查的完成標準</strong>，至少說明檢查範圍，以及結論需要什麼證據。你可以沿用上一課的「已完成的 API 變更」情境。</p><p class="small">請把答案回覆給我，我會用「能否判斷完成」與「是否查得足夠完整」兩個角度給回饋。任何術語不清楚，都可直接問我。</p></section>
+<h2>延伸閱讀</h2><p>讀<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md">官方 writing-for-agents</a> 的「Steps and completion criteria」，再看 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md">to-tickets 原檔</a> 的「Draft vertical slices」及「Publish the tickets」。</p>
+<nav><a href="0003-description-as-trigger.html">上一課</a><a href="../reference/skill-anatomy.html">結構速查</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

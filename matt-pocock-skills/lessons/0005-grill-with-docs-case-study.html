@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>原作實例：grill-with-docs</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">原作實例 · 第一階段 · 約 7 分鐘</div><h1><code>grill-with-docs</code>：一個入口，兩種能力</h1>
+<p class="lead">你在「暫停方案」案例中選過它。現在直接讀 Matt 的原檔，理解它做的事，以及它與相近技能的差別。</p>
+<h2>先看原作</h2>
+<p>官方 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md">grill-with-docs/SKILL.md</a> 很短：它把兩個既有技能接在一起。<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md">grilling</a>負責逐輪追問尚未解決的決策；<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling</a>負責釐清專案術語，並在適合時記錄詞彙與架構決策。</p>
+<div class="flow"><span>grill-with-docs</span><b>→</b><span>grilling：把問題問清楚</span><b>+</b><span>domain-modeling：把語言與決策留下</span></div>
+<div class="table-wrap"><table><thead><tr><th>技能</th><th>用在什麼情境</th><th>主要留下什麼</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md">grill-me</a></td><td>釐清一般計畫或設計，想透過追問測試想法。</td><td>逐輪問答後的共同理解。</td></tr>
+<tr><td><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md">grill-with-docs</a></td><td>釐清工程設計，且專案語言或重要決策需要同步記錄。</td><td>共同理解；在有內容可寫時更新 glossary，重要且符合條件的取捨可寫 ADR。</td></tr>
+<tr><td><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling</a></td><td>已在討論領域概念，需要挑戰模糊詞、邊界案例與現有程式的矛盾。</td><td>更精確的術語；在適合時更新 glossary 或 ADR。</td></tr>
+</tbody></table></div>
+<p>特別留意：<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling 原檔</a>要求 glossary 在第一個術語釐清時才建立，也只在架構決策難以逆轉、事後不易理解且確實有取捨時才考慮 ADR。因此使用 <code>grill-with-docs</code> 不代表每次都必須生出一份 ADR。</p>
+<div class="callout"><strong>這次觀察到的原作做法：</strong><code>grill-with-docs</code>本身不重寫訪談與領域建模的完整規則，而是把兩個技能合起來。先記住這個用法；等看過更多原作，再回頭分析它的設計原則。</div>
+<section class="exercise"><h2>實戰題：選一個入口</h2><p>團隊要做「禮物訂單」。產品說付款者與收件人都叫「顧客」；程式裡的 <code>Customer</code> 卻只指付款者。大家也還沒決定誰能要求退款。你會從 <code>grill-me</code>、<code>grill-with-docs</code>、<code>domain-modeling</code> 中先選哪個？請用 2–3 句說明：要釐清哪些問題，以及什麼內容值得記錄下來。</p><p class="small">回覆給我後，我會檢查你是否抓到「追問決策」與「保存專案語言」這兩個需求。任何原檔內容看不懂，都可以直接問我。</p></section>
+<h2>延伸閱讀</h2><p>請先讀 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md">grill-with-docs 原檔</a>，再對照 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md">grill-me 原檔</a>。兩者都很短，差異在它們接上的能力。</p>
+<nav><a href="../reference/skill-map.html">技能速查表</a><a href="../reference/skill-anatomy.html">結構速查</a><a href="../COURSE.md">課程目錄</a></nav>
+</main></body></html>

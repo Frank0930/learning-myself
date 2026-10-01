@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>原作實例：grilling 的提問順序</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">原作實例 · 第一階段 · 約 7 分鐘</div><h1><code>grilling</code>：先問現在能回答的決策</h1>
+<p class="lead">你已知道何時使用 <code>grill-with-docs</code>。現在看它所接上的 <code>grilling</code>：如何避免一口氣問出依賴尚未確定前提的問題。</p>
+<h2>原作的提問方法</h2>
+<p>Matt 的 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md">grilling/SKILL.md</a> 要求把決策看成一棵樹。每一輪只問「前提已確定、現在可以回答」的問題；這些問題合起來就是當前的 frontier。使用者回答後，重新計算下一輪。直到沒有未處理的決策分支，才請使用者確認是否已達成共同理解。</p>
+<p>以禮物訂單為例：先決定付款者與收件人各是什麼角色，以及誰有權要求退款。若尚未決定退款權限，立刻問「收件人按退款按鈕後要顯示什麼成功訊息」就太早；這個 UI 問題依賴前面的權限決策。</p>
+<div class="flow"><span>列出決策與依賴</span><b>→</b><span>問當前可回答的問題</span><b>→</b><span>用回答更新決策樹</span><b>→</b><span>問下一輪</span></div>
+<div class="callout"><strong>與文件的分工：</strong><code>grilling</code>決定問題如何一輪輪問；<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md"><code>domain-modeling</code></a>在討論中核對程式與術語，等「付款者」「收件人」的定義確定後再更新 glossary。<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md"><code>grill-with-docs</code></a>把兩者接在一起。</div>
+<section class="exercise"><h2>實戰題：排出第一輪問題</h2>
+<p>「禮物訂單」目前有三個待決問題：</p>
+<ol><li>付款者與收件人應分別叫什麼？現有程式的 <code>Customer</code> 指誰？</li><li>誰有權要求退款？</li><li>如果收件人無權退款，收件人點擊退款入口時要看到什麼提示？</li></ol>
+<p>請選出<strong>第一輪可以問的問題</strong>，並說明哪個問題應留到下一輪、它依賴什麼答案。你也可以指出哪些事實應先由 agent 查看現有程式，而不是請使用者猜。</p>
+<p class="small">回覆給我後，我會檢查你是否分清「待決選擇」與「可由環境查到的事實」。有任何不清楚的地方，隨時問我。</p></section>
+<h2>延伸閱讀</h2><p>讀官方 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md">grilling 原檔</a> 的提問迴圈，再看 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling 原檔</a> 的「Cross-reference with code」與「Update GLOSSARY.md inline」。</p>
+<nav><a href="0005-grill-with-docs-case-study.html">上一課</a><a href="../COURSE.md">課程目錄</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>
