@@ -32,4 +32,5 @@
 - 已完成：[第 1 課：先判斷問題，再選技能](lessons/0001-choose-the-right-skill.html)，並成功選出 `grill-with-docs → to-spec → to-tickets`。
 - 已預習：第 2–3 課關於 `SKILL.md` 入口與觸發描述；它們會留到第二階段整合。
 - 已完成：[原作實例：grill-with-docs](lessons/0005-grill-with-docs-case-study.html)，能辨識決策與領域語言需同步釐清的情境。
-- **下一步：**[原作實例：grilling 的提問順序](lessons/0006-grilling-decision-frontier.html)。
+- 已完成：[原作實例：grilling 的提問順序](lessons/0006-grilling-decision-frontier.html)，能判斷前提已具備的問題可同輪詢問。
+- **下一步：**[原作實例：domain-modeling 留下什麼](lessons/0007-domain-modeling-artifacts.html)。

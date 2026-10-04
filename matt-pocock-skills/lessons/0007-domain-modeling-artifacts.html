@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>原作實例：domain-modeling 留下什麼</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">原作實例 · 第一階段 · 約 7 分鐘</div><h1><code>domain-modeling</code>：把語言與重要決策留下</h1>
+<p class="lead">追問讓團隊達成共識；領域建模讓下一次對話不用從頭猜「顧客」代表誰。</p>
+<h2>這個技能實際做什麼</h2>
+<p>依 Matt 的 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling/SKILL.md</a>，agent 會挑戰模糊或互相矛盾的詞，拿具體邊界案例檢查理解，並將討論中的說法與現有程式核對。術語一旦確定，就更新 <code>GLOSSARY.md</code>；重要且符合條件的設計取捨，才考慮寫 ADR。</p>
+<div class="table-wrap"><table><thead><tr><th>內容</th><th>放哪裡</th><th>禮物訂單例子</th></tr></thead><tbody>
+<tr><td>穩定的領域詞義</td><td><code>GLOSSARY.md</code></td><td>「付款者」是支付訂單的人；「收件人」是收到禮物的人。同一人也可能同時扮演兩個角色。</td></tr>
+<tr><td>難以逆轉、事後不易理解、且經過真實取捨的決策</td><td>ADR</td><td>歷史訂單保存收件地址快照，不直接讀使用者目前地址；記下曾考慮的替代方案與原因。</td></tr>
+<tr><td>功能行為與交付範圍</td><td>規格或 ticket</td><td>無退款權限的人點擊入口時顯示什麼訊息。</td></tr>
+</tbody></table></div>
+<p class="small">上表是教學情境，不是官方專案的真實規則。是否寫 ADR 須依該決策是否同時符合官方列出的三個條件判斷。</p>
+<div class="callout"><strong>原作的節制：</strong><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">官方技能</a>要求有第一個確定術語時才建立 glossary；ADR 只有在決策難以逆轉、未來讀者會疑惑、而且真有替代方案取捨時才提出。<code>GLOSSARY.md</code>只記領域概念，不塞進實作細節。</div>
+<h2>回看前一課</h2><p>在你的答案裡，第 1、2 題可以同輪詢問：目前已能用「付款者／收件人」討論退款權限。至於程式中的 <code>Customer</code> 實際指誰，agent 應先查程式；若程式與團隊說法矛盾，<code>domain-modeling</code>會指出差異，等詞義確定再寫入 glossary。這正是<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">官方「Cross-reference with code」與「Update GLOSSARY.md inline」</a>的做法。</p>
+<section class="exercise"><h2>實戰題：哪些內容該記下？</h2><p>團隊討論後得到三項結論：</p><ol><li>「付款者」是完成支付的人；「收件人」是接收禮物的人。</li><li>歷史訂單必須保存收件地址快照；團隊曾考慮只關聯使用者目前地址，但那會讓舊訂單的地址隨使用者修改而改變，且上線後改資料結構成本高。</li><li>沒有退款權限的人點擊退款入口時，顯示「請聯絡付款者」。</li></ol><p>請分別判斷這三項應進 <code>GLOSSARY.md</code>、ADR、規格／ticket，或暫時不用記錄。請特別說明第 2 項是否符合官方 ADR 的三個條件。</p><p class="small">回覆給我後，我會依原作的記錄邊界給回饋。若任何術語不清楚，直接問我。</p></section>
+<h2>延伸閱讀</h2><p>讀 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md">domain-modeling 原檔</a> 的「During the session」與「Offer ADRs sparingly」。</p>
+<nav><a href="0006-grilling-decision-frontier.html">上一課</a><a href="../COURSE.md">課程目錄</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>
