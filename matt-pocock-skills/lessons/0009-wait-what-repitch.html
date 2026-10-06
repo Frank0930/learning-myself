@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>實用技能：wait-what</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">實用技能插課 · 約 6 分鐘</div><h1><code>wait-what</code>：聽不懂就讓 agent 退一步重講</h1>
+<p class="lead">對話中有一句話沒聽懂時，直接叫停。這個技能要求 agent 補上缺少的背景，改用清楚的語言重講剛才的意思。</p>
+<h2>什麼時候用？</h2>
+<p>Matt 在 <a href="https://www.aihero.dev/skills-wait-what">AI Hero 的說明</a>建議：當你發現自己開始略過 agent 的說明、看不懂縮寫、或不知道結論的前提從哪裡來，就主動呼叫 <code>/wait-what</code>。<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md">官方 SKILL.md</a>非常短，要求 agent 補少量背景、用簡明技術英文重講，並盡量使用專案 <code>GLOSSARY.md</code> 中已建立的詞彙。沒有 glossary 時，仍可重講。</p>
+<div class="callout"><strong>和「簡短一點」的差別：</strong>你失去的是理解，不一定是耐心。只刪字可能連關鍵前提一起刪掉；<code>wait-what</code>要求補回前提，再把說明改得容易懂。這是<a href="https://www.aihero.dev/skills-wait-what">Matt 對技能名稱的解釋</a>。</div>
+<h2>一個可立即使用的句子</h2><pre><code>/wait-what</code></pre><p>如果 agent 把退款決策說成「這條路徑由 materialization cascade 經 adapter seam 收斂」，你不必猜那些詞。呼叫後，好的回應會說明「我們現在談的是哪個退款步驟、這些詞對應到專案中的什麼概念，以及原結論為何成立」。</p>
+<p><code>wait-what</code>修補的是<strong>目前這一次說明</strong>。若團隊反覆對同一術語各說各話，<a href="https://www.aihero.dev/skills-wait-what">Matt 建議</a>用 <code>grill-with-docs</code>建立共用語言。</p>
+<section class="exercise"><h2>實戰題：判斷修補哪個問題</h2><p>請看兩個情境：</p><ol><li>agent 剛解釋完退款流程，你不知道它為何假設收件人沒有退款權限。</li><li>產品、客服與工程師長期把「顧客」用來指不同角色，每次會議都因此誤會。</li></ol><p>哪個情境適合立刻使用 <code>/wait-what</code>？另一個更適合哪個你已學過的技能？請再說一句：對第一個情境，好的重講應該補上什麼，而不只是把句子縮短。</p><p class="small">回覆給我後，我會根據你的理由給回饋，再進入下一個實用技能。看不懂本課任何地方，也可以直接用你的話請我重講。</p></section>
+<h2>延伸閱讀</h2><p>讀 <a href="https://www.aihero.dev/skills-wait-what">Matt 的 /wait-what 說明</a> 中「The name is the mechanism」與「When to reach for it」，再對照 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md">官方 SKILL.md 原檔</a>。</p>
+<nav><a href="0008-handoff-portable-context.html">上一課</a><a href="../COURSE.md">課程目錄</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

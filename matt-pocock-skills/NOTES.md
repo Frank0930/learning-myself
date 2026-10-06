@@ -6,3 +6,4 @@
 - 每次先教一個可操作的判斷，再讓學習者用真實案例回答；只有答題後才建立 learning record。
 - 官方 `main` 會變動；索引以查閱當日的 README 為準，深入課程需重新核對原文。
 - 2026-09-29 使用者調整學習順序：先學會既有的 Matt Pocock skills，觀察他如何設計，再學習自己設計技能。先前第 2–4 課屬於設計預習，暫留第二階段；第 4 課練習目前暫停。以 `COURSE.md` 為課程目錄。
+- 2026-10-06 使用者完成 `domain-modeling` 的 glossary／ADR／spec 分類，想先插入幾課實用技能，再回原本順序。使用者更正技能名稱為 `handoff`，並提供 https://www.aihero.dev/skills-handoff 作為學習來源。插課順序：`handoff`、`wait-what`、`to-questionnaire`，然後回原課程。

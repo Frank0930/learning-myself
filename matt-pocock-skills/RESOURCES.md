@@ -14,6 +14,14 @@
   `SKILL.md` 前置資料、呼叫方式與 router skill。用於分析技能結構。
 - [官方 teach 技能](https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md)
   本學習空間所採用的逐課教學與學習紀錄方法。
+- [官方 handoff 技能原檔](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md)
+  交接文件的存放位置、內容邊界、敏感資訊處理與參數用途。用於核對實際技能行為。
+- [Matt Pocock 的 AI Hero：The /handoff Skill](https://www.aihero.dev/skills-handoff)
+  何時需要可攜式交接、與 compact／clear 的差別、分支任務案例與檢查清單。用於實際使用情境。
+- [官方 wait-what 技能原檔](https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md)
+  技能如何要求 agent 補背景、重講並使用專案詞彙。用於核對技能行為。
+- [Matt Pocock 的 AI Hero：The /wait-what Skill](https://www.aihero.dev/skills-wait-what)
+  何時立即打斷說明、與單純要求簡短的差別。用於實際使用情境。
 
 ## Wisdom (Communities)
 

@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>實用技能：handoff</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">實用技能插課 · 約 8 分鐘</div><h1><code>handoff</code>：讓工作能移交</h1>
+<p class="lead">一段對話累積了很多決策，但接下來要由另一個 agent、另一個環境或同事接手。<code>handoff</code>把目前工作整理成一份可以帶走的 Markdown 文件。</p>
+<h2>先判斷：工作會不會移動？</h2>
+<p>Matt 的 <a href="https://www.aihero.dev/skills-handoff">AI Hero 說明</a>列出幾個適用情境：換 agent 工具、換資料夾或 repository、交給同事、把目前發現的支線任務交給第二個 agent。若仍在同一工作脈絡中繼續，該文章建議使用環境自己的壓縮機制，而不是為了「摘要」就建立交接檔。</p>
+<div class="table-wrap"><table><thead><tr><th>情境</th><th>選擇</th><th>原因</th></tr></thead><tbody>
+<tr><td>在同一個 agent 與工作目錄繼續，只是對話太長</td><td>環境提供的 context 壓縮功能</td><td>工作沒有移動，不需要可攜式檔案。</td></tr>
+<tr><td>從目前對話移交給另一個 agent、同事或 repository</td><td><code>handoff</code></td><td>下一位執行者看不到目前對話，需要一份可讀的交接文件。</td></tr>
+<tr><td>目前對話繼續，另開一個支線任務給其他 agent</td><td><code>handoff</code></td><td>交出與支線相關的上下文，原對話仍可繼續。</td></tr>
+</tbody></table></div>
+<h2>原技能會寫什麼？</h2>
+<p><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md">官方 handoff/SKILL.md</a>要求：在作業系統的暫存目錄寫文件；依你提供的「下一個 session 要做什麼」調整內容；列出下一位 agent 建議使用的技能；已存在的規格、ADR、issue、commit 和 diff 只引用路徑或 URL；移除金鑰、密碼和個資。它是使用者主動呼叫的技能。</p>
+<div class="callout"><strong>實際操作：</strong>呼叫 <code>/handoff</code> 時，附上一句下一位要做的工作，例如「交給另一個 agent，在 prototype 目錄驗證退款狀態模型」。拿到文件後先閱讀，確認已驗證的事實、未決問題與下一步沒有混淆。官方技能寫到暫存目錄；若要跨較長時間或換環境使用，依 <a href="https://www.aihero.dev/skills-handoff">AI Hero 的提醒</a>保存到可持續存取的位置。</div>
+<h2>例子：支線原型</h2><p>你正在主對話討論「禮物訂單退款」，遇到一個需要跑程式才能確認的狀態模型問題。你可以讓 <code>handoff</code> 針對「在另一個資料夾建立原型並驗證狀態轉換」寫交接檔。第二個 agent 讀檔後做原型；主對話留在原處，稍後再吸收驗證結果。這是 <a href="https://www.aihero.dev/skills-handoff">AI Hero 文章</a>特別強調的分支用法。</p>
+<section class="exercise"><h2>實戰題：何時該用 handoff？</h2><p>請判斷下面兩個情境，分別選 <code>handoff</code> 或「同一環境的 context 壓縮功能」，並說明理由：</p><ol><li>你與 agent 在同一個 repository 討論一小時，現在只是對話太長，下一步仍由同一個 agent 繼續實作。</li><li>你會留在目前對話設計退款流程，但要讓另一位同事在另一個 repository 驗證付款服務的 API 行為。</li></ol><p>若第 2 題選 <code>handoff</code>，再寫一句你會傳給 <code>/handoff</code> 的任務提示。</p><p class="small">把答案回覆給我；我會檢查你的判斷與任務提示是否讓接手者知道要做什麼。任何細節不清楚，都可以直接問我。</p></section>
+<h2>延伸閱讀</h2><p>先讀 Matt 的 <a href="https://www.aihero.dev/skills-handoff">The /handoff Skill</a> 中「When to reach for it」與「What travels, and what doesn't」，再看 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md">官方 SKILL.md 原檔</a>，對照文章的使用情境與實際指令。</p>
+<nav><a href="../COURSE.md">課程目錄</a><a href="0007-domain-modeling-artifacts.html">上一課</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

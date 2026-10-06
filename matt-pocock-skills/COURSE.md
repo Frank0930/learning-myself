@@ -19,6 +19,10 @@
 
 所有技能的逐一用途、使用時機與官方文件連結，見[25 個技能速查表](reference/skill-map.html)。每個單元會挑真實案例深入讀官方 `SKILL.md`，並用相似情境比較容易混淆的技能。完成第一階段的標準是：看到一個陌生的團隊情境，能選出起始技能，說明不選相鄰技能的理由，並接出合理的後續流程。
 
+## 實用技能插課
+
+依學習者要求，先用三課練習能立即拿來用的技能，再回到第一階段原本順序：① [handoff：讓工作能移交](lessons/0008-handoff-portable-context.html)；② [wait-what：聽不懂就重講](lessons/0009-wait-what-repitch.html)；③ `to-questionnaire`：把需要其他人回答的決策整理成問卷。這三個都在上述 25 個官方技能之中。
+
 ## 第二階段：拆解原作怎麼設計
 
 回頭比較多份官方 `SKILL.md`：frontmatter 與呼叫方式、`description` 的觸發條件、正文的步驟與完成標準、參考文件的分層、技能之間的組合。先前建立的[第 2 課](lessons/0002-read-a-skill-file.html)、[第 3 課](lessons/0003-description-as-trigger.html)、[第 4 課](lessons/0004-completion-criteria.html)會在這裡複習；目前暫停第 4 課練習。
@@ -33,4 +37,6 @@
 - 已預習：第 2–3 課關於 `SKILL.md` 入口與觸發描述；它們會留到第二階段整合。
 - 已完成：[原作實例：grill-with-docs](lessons/0005-grill-with-docs-case-study.html)，能辨識決策與領域語言需同步釐清的情境。
 - 已完成：[原作實例：grilling 的提問順序](lessons/0006-grilling-decision-frontier.html)，能判斷前提已具備的問題可同輪詢問。
-- **下一步：**[原作實例：domain-modeling 留下什麼](lessons/0007-domain-modeling-artifacts.html)。
+- 已完成：[原作實例：domain-modeling 留下什麼](lessons/0007-domain-modeling-artifacts.html)，能區分 glossary、ADR 與 spec。
+- 已完成：[實用技能：handoff](lessons/0008-handoff-portable-context.html)，能區分工作移交與同一環境的 context 壓縮。
+- **下一步：**[實用技能：wait-what](lessons/0009-wait-what-repitch.html)，再學 `to-questionnaire`，之後回到原本課程。
