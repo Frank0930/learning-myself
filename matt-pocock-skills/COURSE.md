@@ -21,7 +21,7 @@
 
 ## 實用技能插課
 
-依學習者要求，先用三課練習能立即拿來用的技能，再回到第一階段原本順序：① [handoff：讓工作能移交](lessons/0008-handoff-portable-context.html)；② [wait-what：聽不懂就重講](lessons/0009-wait-what-repitch.html)；③ `to-questionnaire`：把需要其他人回答的決策整理成問卷。這三個都在上述 25 個官方技能之中。
+依學習者要求，先用三課練習能立即拿來用的技能，再回到第一階段原本順序：① [handoff：讓工作能移交](lessons/0008-handoff-portable-context.html)；② [wait-what：聽不懂就重講](lessons/0009-wait-what-repitch.html)；③ [to-questionnaire：答案在別人手裡](lessons/0010-to-questionnaire-other-person.html)。這三個都在上述 25 個官方技能之中。
 
 ## 第二階段：拆解原作怎麼設計
 
@@ -39,4 +39,6 @@
 - 已完成：[原作實例：grilling 的提問順序](lessons/0006-grilling-decision-frontier.html)，能判斷前提已具備的問題可同輪詢問。
 - 已完成：[原作實例：domain-modeling 留下什麼](lessons/0007-domain-modeling-artifacts.html)，能區分 glossary、ADR 與 spec。
 - 已完成：[實用技能：handoff](lessons/0008-handoff-portable-context.html)，能區分工作移交與同一環境的 context 壓縮。
-- **下一步：**[實用技能：wait-what](lessons/0009-wait-what-repitch.html)，再學 `to-questionnaire`，之後回到原本課程。
+- 已完成：[實用技能：wait-what](lessons/0009-wait-what-repitch.html)，能區分一次說明不清與長期術語分歧。
+- 已完成：[實用技能：to-questionnaire](lessons/0010-to-questionnaire-other-person.html)，能把外部知識缺口寫成具體決策題。三課實用技能插課已結束。
+- **下一步：**回到第一階段，[原作實例：ask-matt 是技能路由器](lessons/0011-ask-matt-router.html)。

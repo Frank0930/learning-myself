@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>實用技能：to-questionnaire</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">實用技能插課 · 約 7 分鐘</div><h1><code>to-questionnaire</code>：答案在別人手裡</h1>
+<p class="lead">當一項決策需要另一位領域專家的知識，先把問題整理成對方能填寫的文件，再帶答案回到原本的討論。</p>
+<h2>先找答案在哪裡</h2>
+<p>Matt 的 <a href="https://www.aihero.dev/skills-to-questionnaire">AI Hero 說明</a>用答案的所在位置區分技能：答案在你心裡但尚未想清楚，可用 <code>grill-me</code>；答案在另一個人的經驗或權限裡，就用 <code>to-questionnaire</code>。它會建立一份 Markdown 問卷，供那個人非同步填寫，或在會議中一起完成。</p>
+<div class="callout"><strong>先問寄送條件：</strong><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md">官方技能原檔</a>要求 agent 先向你確認兩件事：問卷交給誰，以及你需要對方回答哪些具體決策或事實。它不會要你先替對方解答未知的主題。</div>
+<h2>問卷要讓對方能回答</h2>
+<p>官方技能會在目前目錄寫出 <code>to-questionnaire-&lt;slug&gt;.md</code>。文件交代目的、背景、如何作答，再按重要性排列問題；每題只問一件事，留回答位置，最後提供補充欄位。它一次寫給一位收件者，不會自行寄出。即使對方只能回答一部分，或明確寫「不知道」，也比猜測有用。這些做法見<a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md">原檔</a>與<a href="https://www.aihero.dev/skills-to-questionnaire">Matt 的說明</a>。</p>
+<h2>和前面的退款案例接起來</h2><p>你與 agent 已釐清付款者、收件人的術語，但「收件人是否能要求退款」由商務負責人決定。此時繼續向你追問可能沒有答案。可以使用 <code>to-questionnaire</code>，告訴 agent 問卷是給商務負責人，且你需要對方決定退款資格與例外情況。收到回覆後，再回到 <code>grill-with-docs</code> 或 <code>to-spec</code> 整合決策。</p>
+<div class="callout"><strong>中途遇到外部決策怎麼辦？</strong><code>grill-with-docs</code>所用的 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md"><code>grilling</code></a>每輪會一起問所有「前提已確定」的問題，不必等商務負責人回答才能討論與該答案無關的問題。對同一位商務負責人已知要問的多個問題，可交給 <code>to-questionnaire</code>做成<strong>一份</strong> Markdown 問卷；它是靜態清單，不會預先猜出只有收到前置答案後才知道如何提問的分支。詳見 <a href="https://www.aihero.dev/skills-to-questionnaire">Matt 的「Common questions」</a>。</div>
+<section class="exercise"><h2>實戰題：告訴 agent 這份問卷要做什麼</h2><p>假設你是工程師，正在設計「禮物訂單退款」。你不能自行決定退款政策；商務負責人有權決定。你要請 <code>to-questionnaire</code> 幫你寫一份問卷給她。</p><p>請只回答兩件事：</p><ol><li><strong>問卷交給誰？</strong></li><li><strong>你需要她決定哪一個退款規則？</strong></li></ol><p class="small">例如用「收件者：……；需要決定：……」回覆即可。你不用自己寫問卷題目；那是技能接下來要做的事。我會看你提供的資訊是否足夠讓 agent 動筆。</p></section>
+<h2>延伸閱讀</h2><p>讀 <a href="https://www.aihero.dev/skills-to-questionnaire">Matt 的 /to-questionnaire 說明</a>中「The send, not the subject」和「The document」，再對照 <a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md">官方 SKILL.md</a>的三步流程。</p>
+<nav><a href="0009-wait-what-repitch.html">上一課</a><a href="../COURSE.md">課程目錄</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

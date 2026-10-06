@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>原作實例：ask-matt 是技能路由器</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<div class="eyebrow">原作實例 · 回到第一階段 · 約 7 分鐘</div><h1><code>ask-matt</code>：忘記技能名稱時，先找路</h1>
+<p class="lead">技能變多後，不必硬背所有名稱。描述你眼前的處境，讓 <code>ask-matt</code>指出下一步適合的技能或流程。</p>
+<h2>它是路由器</h2>
+<p>Matt 的 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md">ask-matt/SKILL.md</a>是整套技能的手寫地圖。它涵蓋從想法到交付的主流程、bug 和 issue 的入口、架構維護、可獨立使用的技能，以及階段交界時如何處理對話脈絡。<a href="https://www.aihero.dev/skills-ask-matt">AI Hero 說明</a>強調：它會<strong>推薦並停下來</strong>，不會替你執行推薦的技能。</p>
+<div class="table-wrap"><table><thead><tr><th>你描述的處境</th><th>路由器會先考慮</th><th>判斷依據</th></tr></thead><tbody>
+<tr><td>在專案內有一個想法，需求還不清楚</td><td><code>grill-with-docs</code></td><td>先釐清決策與專案語言。</td></tr>
+<tr><td>外部送來很多 bug 報告與需求</td><td><code>triage</code></td><td>先分流未整理的工作。</td></tr>
+<tr><td>遇到難以定位的 bug</td><td><code>diagnosing-bugs</code></td><td>先建立能重現問題的診斷迴圈。</td></tr>
+<tr><td>一件龐大且路徑不清的多次對話工作</td><td><code>wayfinder</code></td><td>先把未知決策畫成可逐步處理的地圖。</td></tr>
+</tbody></table></div>
+<p class="small">上表是依 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md">官方路由器</a>整理的入門片段；路由器還會依規模與專案狀態調整後續順序。</p>
+<div class="callout"><strong>怎麼使用：</strong>在有這個技能的環境輸入 <code>/ask-matt</code>，描述現況，例如「我有三個外部回報的 bug，不知道該從哪個開始」。得到建議後，再由你選擇並啟動下一個技能。若還沒在專案設定 Matt 的工程技能，原檔也指出 <code>setup-matt-pocock-skills</code> 是前置步驟。</div>
+<h2>和你已學過的技能接起來</h2><p>你剛練過的 <code>handoff</code>、<code>wait-what</code>與 <code>to-questionnaire</code>都能獨立使用。當你分不清「現在該繼續對話、壓縮 context、還是 handoff」，<code>ask-matt</code>也有階段交界的選擇路徑。這顯示它提供的是<strong>選路</strong>，不是另一套實作流程。詳見<a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md">原檔中的 Phase boundaries 與 Standalone</a>。</p>
+<section class="exercise"><h2>實戰題：先選入口</h2><p>你在一個現有專案內收到三張外部 bug 回報。每張都很簡略，目前不知道哪張能重現、哪張影響最大。你還沒有決定要修哪一張。</p><p>如果先問 <code>ask-matt</code>，你預期它會推薦哪個<strong>起始技能</strong>？請用一句話說明，為什麼此時還不應直接進入 <code>implement</code>。</p><p class="small">回覆給我後，我會檢查你的選擇與理由，再帶你看起步設定與後續工程技能。任何句子不清楚，直接問我。</p></section>
+<h2>延伸閱讀</h2><p>讀 <a href="https://www.aihero.dev/skills-ask-matt">Matt 的 /ask-matt 說明</a>中「What it does」與「Flows, not skills」，再查 <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md">官方 SKILL.md</a>的「On-ramps」。</p>
+<nav><a href="0010-to-questionnaire-other-person.html">上一課</a><a href="../COURSE.md">課程目錄</a><a href="../reference/skill-map.html">技能地圖</a></nav>
+</main></body></html>

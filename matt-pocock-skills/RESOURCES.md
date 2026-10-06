@@ -22,6 +22,14 @@
   技能如何要求 agent 補背景、重講並使用專案詞彙。用於核對技能行為。
 - [Matt Pocock 的 AI Hero：The /wait-what Skill](https://www.aihero.dev/skills-wait-what)
   何時立即打斷說明、與單純要求簡短的差別。用於實際使用情境。
+- [官方 to-questionnaire 技能原檔](https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md)
+  詢問收件者與待解問題的流程，以及問卷文件的結構。用於核對技能行為。
+- [Matt Pocock 的 AI Hero：The /to-questionnaire Skill](https://www.aihero.dev/skills-to-questionnaire)
+  答案掌握在他人手中時的使用時機、問卷交付方式與單一收件者邊界。用於實際使用情境。
+- [官方 ask-matt 技能原檔](https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md)
+  主流程、其他入口與階段交界的技能路由地圖。用於理解整套技能的組合。
+- [Matt Pocock 的 AI Hero：The /ask-matt Skill](https://www.aihero.dev/skills-ask-matt)
+  何時找路由器、路由器只推薦不執行的使用說明。
 
 ## Wisdom (Communities)
 
